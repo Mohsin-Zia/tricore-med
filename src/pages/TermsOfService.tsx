@@ -700,8 +700,8 @@ const TermsOfService = () => {
                 {
                   icon: Phone,
                   label: "Phone",
-                  value: "+1-501-313-3708",
-                  href: "tel:+15013133708",
+                  value: "+1-201-699-6877",
+                  href: "tel:+1-201-699-6877s",
                 },
                 {
                   icon: Mail,
