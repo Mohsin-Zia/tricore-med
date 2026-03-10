@@ -36,8 +36,7 @@ export const HIPAASecuritySection = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-20 bg-muted/30 relative overflow-hidden"
-    >
+      className="py-20 bg-muted/30 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -48,9 +47,9 @@ export const HIPAASecuritySection = () => {
             HIPAA-Ready Medical Billing Solutions
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            At Tricore Med Billing, safeguarding your patients’ data is our top
-            priority. We ensure all billing and revenue cycle processes meet the
-            strictest privacy and security standards.
+            At Tricore Medical Billing, safeguarding your patients’ data is our
+            top priority. We ensure all billing and revenue cycle processes meet
+            the strictest privacy and security standards.
           </p>
         </div>
 
@@ -82,8 +81,7 @@ export const HIPAASecuritySection = () => {
               return (
                 <div
                   key={index}
-                  className="bg-card rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-border"
-                >
+                  className="bg-card rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-border">
                   <div className="w-12 h-12 rounded-lg bg-teal/10 flex items-center justify-center mb-4">
                     <Icon className="w-6 h-6 text-teal" />
                   </div>
@@ -108,7 +106,7 @@ export const HIPAASecuritySection = () => {
             <p className="text-white/90 text-lg leading-relaxed mb-8">
               Working with a HIPAA-compliant billing partner helps protect your
               practice from costly penalties, preserves patient trust, and
-              ensures secure, professional operations. Tricore Med Billing
+              ensures secure, professional operations. Tricore Medical Billing
               delivers reliable billing services backed by strict privacy and
               data protection standards.
             </p>

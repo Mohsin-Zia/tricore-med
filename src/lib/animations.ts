@@ -76,7 +76,7 @@ export const flipIn = {
   animate: {
     opacity: 1,
     rotateY: 0,
-    transition: { duration: 0.6 }
+    transition: { duration: 0.6 },
   },
   exit: { opacity: 0, rotateY: 90 },
 };
@@ -86,7 +86,7 @@ export const blurIn = {
   animate: {
     opacity: 1,
     filter: "blur(0px)",
-    transition: { duration: 0.5 }
+    transition: { duration: 0.5 },
   },
   exit: { opacity: 0, filter: "blur(10px)" },
 };
@@ -105,12 +105,12 @@ export const elasticScale = {
 
 export const staggerContainer = {
   initial: {},
-  animate: {
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.1,
-    },
-  },
+  animate: { transition: { staggerChildren: 0.04 } },
+};
+
+export const staggerItem = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.4 } },
 };
 
 export const staggerContainerFast = {
@@ -133,17 +133,13 @@ export const staggerContainerSlow = {
   },
 };
 
-export const staggerItem = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-};
-
 export const cardHover = {
   rest: { scale: 1, boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)" },
   hover: {
     scale: 1.02,
-    boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)",
-    transition: { duration: 0.2 }
+    boxShadow:
+      "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)",
+    transition: { duration: 0.2 },
   },
 };
 
@@ -157,7 +153,7 @@ export const cardHover3D = {
     rotateY: 5,
     rotateX: 5,
     scale: 1.02,
-    transition: { duration: 0.3 }
+    transition: { duration: 0.3 },
   },
 };
 
@@ -173,7 +169,7 @@ export const buttonGlow = {
   },
   hover: {
     boxShadow: "0 0 20px rgba(59, 130, 246, 0.5)",
-    transition: { duration: 0.3 }
+    transition: { duration: 0.3 },
   },
 };
 
@@ -182,12 +178,12 @@ export const pageTransition = {
   animate: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] as const }
+    transition: { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] as const },
   },
   exit: {
     opacity: 0,
     y: -20,
-    transition: { duration: 0.3, ease: [0.55, 0.055, 0.675, 0.19] as const }
+    transition: { duration: 0.3, ease: [0.55, 0.055, 0.675, 0.19] as const },
   },
 };
 
@@ -196,12 +192,12 @@ export const pageTransitionScale = {
   animate: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] as const }
+    transition: { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] as const },
   },
   exit: {
     opacity: 0,
     scale: 1.05,
-    transition: { duration: 0.3, ease: [0.55, 0.055, 0.675, 0.19] as const }
+    transition: { duration: 0.3, ease: [0.55, 0.055, 0.675, 0.19] as const },
   },
 };
 
@@ -221,7 +217,7 @@ export const counterAnimation = {
   animate: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.5, ease: "easeOut" }
+    transition: { duration: 0.5, ease: "easeOut" },
   },
 };
 
@@ -233,7 +229,7 @@ export const counterPop = {
       type: "spring",
       stiffness: 400,
       damping: 10,
-    }
+    },
   },
 };
 
@@ -307,7 +303,7 @@ export const slideReveal = {
   initial: { width: "0%" },
   animate: {
     width: "100%",
-    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] as const }
+    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] as const },
   },
 };
 
@@ -318,16 +314,16 @@ export const expandOpen = {
     opacity: 1,
     transition: {
       height: { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] },
-      opacity: { duration: 0.3 }
-    }
+      opacity: { duration: 0.3 },
+    },
   },
   exit: {
     height: 0,
     opacity: 0,
     transition: {
       height: { duration: 0.3 },
-      opacity: { duration: 0.2 }
-    }
+      opacity: { duration: 0.2 },
+    },
   },
 };
 

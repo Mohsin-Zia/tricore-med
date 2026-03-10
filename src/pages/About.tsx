@@ -323,8 +323,7 @@ const About = () => {
                 size="lg"
                 variant="outline"
                 className="bg-transparent border-white/40 text-white hover:bg-white/10"
-                asChild
-              >
+                asChild>
                 <Link to="/services">Our Services</Link>
               </Button>
             </div>
@@ -339,8 +338,7 @@ const About = () => {
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
+              viewport={{ once: true }}>
               <h2 className="text-3xl font-bold text-foreground mb-6">
                 Our Mission
               </h2>
@@ -368,8 +366,7 @@ const About = () => {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="grid grid-cols-2 gap-6"
-            >
+              className="grid grid-cols-2 gap-6">
               <StatCounter
                 value={1500}
                 suffix="+"
@@ -406,8 +403,7 @@ const About = () => {
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+            viewport={{ once: true }}>
             <h2 className="text-3xl font-bold text-foreground mb-4">
               Our Core Values
             </h2>
@@ -422,14 +418,12 @@ const About = () => {
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true }}
-          >
+            viewport={{ once: true }}>
             {values.map((value, index) => (
               <motion.div
                 key={index}
                 variants={staggerItem}
-                className="bg-card rounded-xl p-6 shadow-card text-center hover:shadow-lg transition-shadow"
-              >
+                className="bg-card rounded-xl p-6 shadow-card text-center hover:shadow-lg transition-shadow">
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
                   <value.icon className="w-7 h-7 text-primary" />
                 </div>
@@ -447,8 +441,7 @@ const About = () => {
       <section
         id="journey"
         ref={journeySectionRef}
-        className="py-20 bg-background overflow-hidden"
-      >
+        className="py-20 bg-background overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-foreground mb-4">
@@ -469,26 +462,21 @@ const About = () => {
                 return (
                   <div
                     key={index}
-                    className="milestone-wrapper relative flex items-center mb-16"
-                  >
+                    className="milestone-wrapper relative flex items-center mb-16">
                     {/* Content Box */}
                     <div
-                      className={`w-5/12 ${isLeft ? "text-right pr-12" : "text-left pl-12 ml-auto"}`}
-                    >
+                      className={`w-5/12 ${isLeft ? "text-right pr-12" : "text-left pl-12 ml-auto"}`}>
                       <div
-                        className={`milestone-box bg-card rounded-xl p-6 shadow-card hover:shadow-lg transition-all relative overflow-hidden group`}
-                      >
+                        className={`milestone-box bg-card rounded-xl p-6 shadow-card hover:shadow-lg transition-all relative overflow-hidden group`}>
                         {/* Arrow pointing to center line */}
                         <div
                           className={`milestone-arrow absolute top-1/2 ${
                             isLeft
                               ? "right-0 translate-x-1/2 -translate-y-1/2"
                               : "left-0 -translate-x-1/2 -translate-y-1/2"
-                          } z-10`}
-                        >
+                          } z-10`}>
                           <div
-                            className={`arrow-icon text-4xl ${isLeft ? "" : "rotate-180"}`}
-                          >
+                            className={`arrow-icon text-4xl ${isLeft ? "" : "rotate-180"}`}>
                             ➤
                           </div>
                         </div>
@@ -538,8 +526,7 @@ const About = () => {
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+            viewport={{ once: true }}>
             <h2 className="text-3xl font-bold text-foreground mb-4">
               Leadership Team
             </h2>
@@ -553,14 +540,12 @@ const About = () => {
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true }}
-          >
+            viewport={{ once: true }}>
             {team.map((member, index) => (
               <motion.div
                 key={index}
                 variants={staggerItem}
-                className="bg-card rounded-xl p-6 shadow-card text-center hover:shadow-lg transition-shadow"
-              >
+                className="bg-card rounded-xl p-6 shadow-card text-center hover:shadow-lg transition-shadow">
                 <div className="w-20 h-20 rounded-full bg-gradient-primary flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-primary-foreground">
                   {member.initials}
                 </div>
@@ -591,8 +576,7 @@ const About = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
+                transition={{ delay: index * 0.1 }}>
                 <div className="text-4xl font-bold text-primary mb-2">
                   {stat.value}
                 </div>
@@ -632,8 +616,8 @@ const About = () => {
       </section>
 
       <CTASection
-        title="Why Healthcare Providers Choose Tricore Med Billing "
-        description="Healthcare providers partner with Tricore Med Billing for our precision, transparency, and proven results. Our advanced billing systems and experienced consultants reduce claim errors, increase reimbursements, and help practices stay compliant with constantly evolving payer regulations."
+        title="Why Healthcare Providers Choose Tricore Medical Billing "
+        description="Healthcare providers partner with Tricore Medical Billing for our precision, transparency, and proven results. Our advanced billing systems and experienced consultants reduce claim errors, increase reimbursements, and help practices stay compliant with constantly evolving payer regulations."
       />
     </PageWrapper>
   );

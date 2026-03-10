@@ -104,23 +104,23 @@ export const Navbar = () => {
       transition={{
         duration: 0.4,
         ease: [0.25, 0.46, 0.45, 0.94] as const,
-      }}
-    >
+      }}>
       <div>
         <nav className="flex items-center justify-between h-16 md:h-20 px-6">
           {/* Logo */}
           <motion.div
             // whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-          >
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center shadow-lg">
-                <span className="text-sm font-bold text-primary-foreground">
-                  TMD
-                </span>
+            transition={{ duration: 0.2 }}>
+            <Link to="/" className="flex items-center gap-0.5">
+              <div className="w-14 h-14 flex items-center justify-center">
+                <img
+                  src="/logo.png"
+                  alt="Tricore Medical Billing Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="text-xl font-bold transition-colors text-foreground">
-                Tricore<span className="text-teal"> Medical</span>
+                Tricore<span className="text-teal"> Medical Billing</span>
               </span>
             </Link>
           </motion.div>
@@ -140,8 +140,9 @@ export const Navbar = () => {
                 onMouseEnter={() =>
                   item.hasDropdown && setActiveDropdown(item.label)
                 }
-                onMouseLeave={() => item.hasDropdown && setActiveDropdown(null)}
-              >
+                onMouseLeave={() =>
+                  item.hasDropdown && setActiveDropdown(null)
+                }>
                 <Link
                   to={item.href}
                   className={cn(
@@ -151,16 +152,14 @@ export const Navbar = () => {
                         item.href !== "/")
                       ? "text-primary bg-primary/10"
                       : "text-foreground/80 hover:bg-muted/50",
-                  )}
-                >
+                  )}>
                   {item.label}
                   {item.hasDropdown && (
                     <motion.div
                       animate={{
                         rotate: activeDropdown === item.label ? 180 : 0,
                       }}
-                      transition={{ duration: 0.2 }}
-                    >
+                      transition={{ duration: 0.2 }}>
                       <ChevronDown className="w-4 h-4" />
                     </motion.div>
                   )}
@@ -186,21 +185,18 @@ export const Navbar = () => {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-64"
-                      >
+                        className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-64">
                         <div className="bg-card/95 backdrop-blur-xl rounded-xl shadow-2xl border border-border/50 p-2 max-h-96 overflow-y-auto">
                           {item.items?.map((subItem, subIndex) => (
                             <motion.div
                               key={subItem.href}
                               initial={{ opacity: 0, x: -10 }}
                               animate={{ opacity: 1, x: 0 }}
-                              transition={{ delay: subIndex * 0.05 }}
-                            >
+                              transition={{ delay: subIndex * 0.05 }}>
                               <Link
                                 to={subItem.href}
                                 className="block px-3 py-2 text-sm rounded-lg hover:bg-primary/10 transition-colors group"
-                                onClick={() => setActiveDropdown(null)}
-                              >
+                                onClick={() => setActiveDropdown(null)}>
                                 <div className="font-medium text-foreground group-hover:text-primary transition-colors">
                                   {subItem.label}
                                 </div>
@@ -225,12 +221,10 @@ export const Navbar = () => {
               href="tel:+1 (201) 699-6877"
               className="flex items-center text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-3 py-2 rounded-lg hover:bg-muted/50"
               whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
+              whileTap={{ scale: 0.95 }}>
               <motion.div
                 animate={{ rotate: [0, 10, -10, 0] }}
-                transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
-              >
+                transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}>
                 <Phone className="w-4 h-4 mr-2" />
               </motion.div>
               +1 (201) 699-6877
@@ -238,8 +232,7 @@ export const Navbar = () => {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
                 asChild
-                className="bg-teal hover:bg-teal/90 shadow-lg hover:shadow-xl transition-shadow"
-              >
+                className="bg-teal hover:bg-teal/90 shadow-lg hover:shadow-xl transition-shadow">
                 <Link to="/contact">Get Started</Link>
               </Button>
             </motion.div>
@@ -250,15 +243,13 @@ export const Navbar = () => {
             className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors relative overflow-hidden"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
-            whileTap={{ scale: 0.9 }}
-          >
+            whileTap={{ scale: 0.9 }}>
             <motion.div
               key={isOpen ? "open" : "closed"}
               initial={{ rotate: -90, opacity: 0 }}
               animate={{ rotate: 0, opacity: 1 }}
               exit={{ rotate: 90, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-            >
+              transition={{ duration: 0.2 }}>
               {isOpen ? (
                 <X className="w-6 h-6" />
               ) : (
@@ -280,8 +271,7 @@ export const Navbar = () => {
               duration: 0.3,
               ease: [0.25, 0.46, 0.45, 0.94] as const,
             }}
-            className="lg:hidden bg-background/95 backdrop-blur-xl border-t border-border/50 overflow-hidden"
-          >
+            className="lg:hidden bg-background/95 backdrop-blur-xl border-t border-border/50 overflow-hidden">
             <motion.div
               className="px-6 py-6 space-y-2"
               initial="hidden"
@@ -292,8 +282,7 @@ export const Navbar = () => {
                     staggerChildren: 0.05,
                   },
                 },
-              }}
-            >
+              }}>
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.href}
@@ -301,8 +290,7 @@ export const Navbar = () => {
                     hidden: { opacity: 0, x: -20 },
                     visible: { opacity: 1, x: 0 },
                   }}
-                  transition={{ duration: 0.2 }}
-                >
+                  transition={{ duration: 0.2 }}>
                   {item.hasDropdown ? (
                     <div>
                       <button
@@ -316,15 +304,13 @@ export const Navbar = () => {
                           location.pathname.startsWith(item.href)
                             ? "text-primary bg-primary/10"
                             : "text-foreground/80 hover:text-primary hover:bg-muted/50",
-                        )}
-                      >
+                        )}>
                         {item.label}
                         <motion.div
                           animate={{
                             rotate: mobileDropdown === item.label ? 180 : 0,
                           }}
-                          transition={{ duration: 0.2 }}
-                        >
+                          transition={{ duration: 0.2 }}>
                           <ChevronDown className="w-4 h-4" />
                         </motion.div>
                       </button>
@@ -335,23 +321,20 @@ export const Navbar = () => {
                             animate={{ opacity: 1, height: "auto" }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.2 }}
-                            className="ml-4 mt-2 space-y-1 overflow-hidden"
-                          >
+                            className="ml-4 mt-2 space-y-1 overflow-hidden">
                             {item.items?.map((subItem, subIndex) => (
                               <motion.div
                                 key={subItem.href}
                                 initial={{ opacity: 0, x: -10 }}
                                 animate={{ opacity: 1, x: 0 }}
-                                transition={{ delay: subIndex * 0.03 }}
-                              >
+                                transition={{ delay: subIndex * 0.03 }}>
                                 <Link
                                   to={subItem.href}
                                   className="block py-2 px-4 text-sm rounded-lg hover:bg-primary/10 transition-colors"
                                   onClick={() => {
                                     setMobileDropdown(null);
                                     setIsOpen(false);
-                                  }}
-                                >
+                                  }}>
                                   <div className="font-medium text-foreground">
                                     {subItem.label}
                                   </div>
@@ -374,8 +357,7 @@ export const Navbar = () => {
                           ? "text-primary bg-primary/10"
                           : "text-foreground/80 hover:text-primary hover:bg-muted/50",
                       )}
-                      onClick={() => setIsOpen(false)}
-                    >
+                      onClick={() => setIsOpen(false)}>
                       {item.label}
                     </Link>
                   )}
@@ -388,8 +370,7 @@ export const Navbar = () => {
                   hidden: { opacity: 0, y: 10 },
                   visible: { opacity: 1, y: 0 },
                 }}
-                className="pt-4 mt-4 border-t border-border/50 space-y-2"
-              >
+                className="pt-4 mt-4 border-t border-border/50 space-y-2">
                 <div className="px-4 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
                   Legal
                 </div>
@@ -398,13 +379,11 @@ export const Navbar = () => {
                     key={item.href}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.05 }}
-                  >
+                    transition={{ delay: index * 0.05 }}>
                     <Link
                       to={item.href}
                       className="flex items-center py-2 px-4 text-sm rounded-lg hover:bg-muted/50 transition-colors"
-                      onClick={() => setIsOpen(false)}
-                    >
+                      onClick={() => setIsOpen(false)}>
                       <item.icon className="w-4 h-4 mr-2 text-primary" />
                       {item.label}
                     </Link>
@@ -417,19 +396,16 @@ export const Navbar = () => {
                   hidden: { opacity: 0, y: 10 },
                   visible: { opacity: 1, y: 0 },
                 }}
-                className="pt-6 mt-4 border-t border-border/50 space-y-4"
-              >
+                className="pt-6 mt-4 border-t border-border/50 space-y-4">
                 <a
                   href="tel:+1 (201) 699-6877"
-                  className="flex items-center text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-4 py-2 rounded-lg hover:bg-muted/50"
-                >
+                  className="flex items-center text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-4 py-2 rounded-lg hover:bg-muted/50">
                   <Phone className="w-4 h-4 mr-2" />
                   +1 (201) 699-6877
                 </a>
                 <Button
                   className="w-full bg-teal hover:bg-teal/90 shadow-lg"
-                  asChild
-                >
+                  asChild>
                   <Link to="/contact" onClick={() => setIsOpen(false)}>
                     Get Started
                   </Link>

@@ -27,8 +27,8 @@ const Index = () => {
       <PricingSection />
       <FAQSection limit={5} />
       <CTASection
-        title="Why Healthcare Providers Choose Tricore Med Billing "
-        description="Healthcare providers partner with Tricore Med Billing for our precision, transparency, and proven results. Our advanced billing systems and experienced consultants reduce claim errors, increase reimbursements, and help practices stay compliant with constantly evolving payer regulations."
+        title="Why Healthcare Providers Choose Tricore Medical Billing "
+        description="Healthcare providers partner with Tricore Medical Billing for our precision, transparency, and proven results. Our advanced billing systems and experienced consultants reduce claim errors, increase reimbursements, and help practices stay compliant with constantly evolving payer regulations."
       />
     </PageWrapper>
   );

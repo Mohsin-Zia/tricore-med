@@ -35,8 +35,7 @@ export const DMESection = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-20 bg-background relative overflow-hidden"
-    >
+      className="py-20 bg-background relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div
@@ -55,7 +54,7 @@ export const DMESection = () => {
             Specialized DME Solutions
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            How Tricore Handles DME Billing
+            How Tricore Medical Billing Handles DME Billing
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             We tailor our services to independent practices and expanding
@@ -71,8 +70,7 @@ export const DMESection = () => {
             return (
               <div
                 key={index}
-                className="bg-card rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-border"
-              >
+                className="bg-card rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-border">
                 <div className="w-12 h-12 rounded-lg bg-teal/10 flex items-center justify-center mb-4">
                   <Icon className="w-6 h-6 text-teal" />
                 </div>
@@ -93,14 +91,13 @@ export const DMESection = () => {
             Learn More About DME Billing
           </h3>
           <p className="text-white/90 mb-6 max-w-2xl mx-auto">
-            With Tricore Med Billing, you gain a dependable partner focused on
-            your financial success — so you can dedicate your time to delivering
-            exceptional patient care.
+            With Tricore Medical Billing, you gain a dependable partner focused
+            on your financial success — so you can dedicate your time to
+            delivering exceptional patient care.
           </p>
           <a
             href="/contact"
-            className="inline-flex items-center px-6 py-3 bg-white text-navy font-semibold rounded-lg hover:bg-white/90 transition-colors"
-          >
+            className="inline-flex items-center px-6 py-3 bg-white text-navy font-semibold rounded-lg hover:bg-white/90 transition-colors">
             Contact Our DME Experts
           </a>
         </div>

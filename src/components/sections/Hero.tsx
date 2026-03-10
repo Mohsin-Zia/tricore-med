@@ -65,8 +65,7 @@ export const Hero = () => {
 
             <h1
               ref={titleRef}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight tracking-tight"
-            >
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight tracking-tight">
               Optimized Medical Billing
               <br />
               <span className="text-teal-light inline-block">
@@ -76,9 +75,8 @@ export const Hero = () => {
 
             <p
               ref={subtitleRef}
-              className="text-lg md:text-xl text-white/90 mb-8 max-w-lg leading-relaxed"
-            >
-              Tricore Med Billing delivers professional medical billing and
+              className="text-lg md:text-xl text-white/90 mb-8 max-w-lg leading-relaxed">
+              Tricore Medical Billing delivers professional medical billing and
               consulting solutions designed to simplify your practice operations
               and enhance financial performance. Our comprehensive services
               include full-service billing, telehealth and RPM support, as well
@@ -90,8 +88,7 @@ export const Hero = () => {
               {heroFeatures.map((feature, index) => (
                 <div
                   key={index}
-                  className="hero-feature flex items-center text-white/90"
-                >
+                  className="hero-feature flex items-center text-white/90">
                   <CheckCircle2 className="w-5 h-5 text-teal-light mr-2 flex-shrink-0" />
                   <span className="text-sm font-medium">{feature}</span>
                 </div>
@@ -102,8 +99,7 @@ export const Hero = () => {
               <Button
                 size="lg"
                 className="bg-teal hover:bg-teal/90 text-white group"
-                asChild
-              >
+                asChild>
                 <Link to="/contact">
                   Speak with Billing Experts
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -113,8 +109,7 @@ export const Hero = () => {
                 size="lg"
                 variant="outline"
                 className="bg-transparent border-white/40 text-white hover:bg-white/10 hover:border-white/60"
-                asChild
-              >
+                asChild>
                 <Link to="/services">Our Services</Link>
               </Button>
             </div>

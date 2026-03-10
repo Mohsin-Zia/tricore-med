@@ -67,24 +67,22 @@ export const Footer = () => {
             <div className="space-y-3">
               <a
                 href="tel:+1 (201) 699-6877"
-                className="flex items-center text-primary-foreground/80 hover:text-primary-foreground transition-colors"
-              >
+                className="flex items-center text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                 <Phone className="w-5 h-5 mr-3" />
                 +1 (201) 699-6877
               </a>
               <a
                 href="mailto:contact@tricoremd.com"
-                className="flex items-center text-primary-foreground/80 hover:text-primary-foreground transition-colors"
-              >
+                className="flex items-center text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                 <Mail className="w-5 h-5 mr-3" />
                 contact@tricoremd.com
               </a>
               <div className="flex items-start text-primary-foreground/80">
                 <MapPin className="w-5 h-5 mr-3 mt-0.5" />
                 <span>
-                  123 Medical Center Dr.
+                  25 Hamilton Ave,
                   <br />
-                  Suite 500, New York, NY 10001
+                  Clifton, NJ 07011, USA
                 </span>
               </div>
             </div>
@@ -98,8 +96,7 @@ export const Footer = () => {
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
-                  >
+                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -115,8 +112,7 @@ export const Footer = () => {
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
-                  >
+                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -132,8 +128,7 @@ export const Footer = () => {
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
-                  >
+                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -145,8 +140,7 @@ export const Footer = () => {
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
-                  >
+                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm">
                     {link.label}
                   </Link>
                 </li>
@@ -169,8 +163,7 @@ export const Footer = () => {
                   key={social.label}
                   href={social.href}
                   className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
-                  aria-label={social.label}
-                >
+                  aria-label={social.label}>
                   <social.icon className="w-5 h-5" />
                 </a>
               ))}
