@@ -474,12 +474,7 @@ const About = () => {
                             isLeft
                               ? "right-0 translate-x-1/2 -translate-y-1/2"
                               : "left-0 -translate-x-1/2 -translate-y-1/2"
-                          } z-10`}>
-                          <div
-                            className={`arrow-icon text-4xl ${isLeft ? "" : "rotate-180"}`}>
-                            ➤
-                          </div>
-                        </div>
+                          } z-10`}></div>
 
                         {/* Decorative background pattern */}
                         <div className="absolute inset-0 opacity-5 bg-gradient-to-br from-primary to-secondary" />
