@@ -23,7 +23,7 @@ const Index = () => {
       <DMESection />
       <HIPAASecuritySection />
       <SpecialtiesSection />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <PricingSection />
       <FAQSection limit={5} />
       <CTASection
