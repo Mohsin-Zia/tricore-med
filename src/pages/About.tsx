@@ -279,7 +279,7 @@ const About = () => {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
+              backgroundImage: `url('1.jpeg')`,
               height: "120%",
               top: "-10%",
             }}
@@ -474,12 +474,7 @@ const About = () => {
                             isLeft
                               ? "right-0 translate-x-1/2 -translate-y-1/2"
                               : "left-0 -translate-x-1/2 -translate-y-1/2"
-                          } z-10`}>
-                          <div
-                            className={`arrow-icon text-4xl ${isLeft ? "" : "rotate-180"}`}>
-                            ➤
-                          </div>
-                        </div>
+                          } z-10`}></div>
 
                         {/* Decorative background pattern */}
                         <div className="absolute inset-0 opacity-5 bg-gradient-to-br from-primary to-secondary" />

@@ -2,7 +2,15 @@ import { motion } from "framer-motion";
 import { PageWrapper } from "@/components/layout/PageWrapper";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CTASection } from "@/components/sections/CTASection";
-import { TrendingUp, Users, DollarSign, Award, CheckCircle2, ArrowRight, Star } from "lucide-react";
+import {
+  TrendingUp,
+  Users,
+  DollarSign,
+  Award,
+  CheckCircle2,
+  ArrowRight,
+  Star,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -17,26 +25,29 @@ const caseStudies = [
       collections: "$450,000/month",
       denialRate: "12%",
       daysInAR: "52",
-      staff: "2 in-house billers"
+      staff: "2 in-house billers",
     },
     after: {
       collections: "$607,500/month",
       denialRate: "3%",
       daysInAR: "28",
-      staff: "0 in-house billers"
+      staff: "0 in-house billers",
     },
     timeline: "6 Months",
-    challenge: "The practice was struggling with high denial rates, delayed payments, and overwhelmed staff trying to manage billing alongside patient care.",
-    solution: "Implemented end-to-end revenue cycle management with dedicated cardiology coders, real-time claim tracking, and proactive denial prevention.",
+    challenge:
+      "The practice was struggling with high denial rates, delayed payments, and overwhelmed staff trying to manage billing alongside patient care.",
+    solution:
+      "Implemented end-to-end revenue cycle management with dedicated cardiology coders, real-time claim tracking, and proactive denial prevention.",
     results: [
       "35% increase in monthly collections",
       "75% reduction in claim denials",
       "46% faster payment turnaround",
-      "Eliminated billing overhead costs"
+      "Eliminated billing overhead costs",
     ],
-    testimonial: "\"MedBill Pro transformed our revenue cycle. Our denial rate dropped from 12% to 3% within the first three months. The cardiology-specific coding expertise made all the difference.\"",
+    testimonial:
+      '"MedBill Pro transformed our revenue cycle. Our denial rate dropped from 12% to 3% within the first three months. The cardiology-specific coding expertise made all the difference."',
     author: "Dr. James Morrison",
-    role: "Practice Administrator"
+    role: "Practice Administrator",
   },
   {
     id: 2,
@@ -48,26 +59,29 @@ const caseStudies = [
       collections: "$680,000/month",
       denialRate: "8%",
       daysInAR: "65",
-      staff: "3 in-house billers"
+      staff: "3 in-house billers",
     },
     after: {
       collections: "$850,000/month",
       denialRate: "2%",
       daysInAR: "26",
-      staff: "1 in-house biller"
+      staff: "1 in-house biller",
     },
     timeline: "4 Months",
-    challenge: "The practice had aging accounts receivable with significant revenue tied up in claims over 60 days old. Cash flow was inconsistent and unpredictable.",
-    solution: "Implemented aggressive A/R follow-up, improved claim scrubbing, and dedicated denial management team with weekly reporting.",
+    challenge:
+      "The practice had aging accounts receivable with significant revenue tied up in claims over 60 days old. Cash flow was inconsistent and unpredictable.",
+    solution:
+      "Implemented aggressive A/R follow-up, improved claim scrubbing, and dedicated denial management team with weekly reporting.",
     results: [
       "25% increase in collections",
       "60% reduction in days in A/R",
       "Recovered $325,000 in aged A/R",
-      "67% reduction in billing staff costs"
+      "67% reduction in billing staff costs",
     ],
-    testimonial: "\"The A/R recovery was remarkable. They recovered over $300K in claims we thought were uncollectible. Our cash flow has never been more predictable.\"",
+    testimonial:
+      '"The A/R recovery was remarkable. They recovered over $300K in claims we thought were uncollectible. Our cash flow has never been more predictable."',
     author: "Sarah Thompson",
-    role: "Practice Manager"
+    role: "Practice Manager",
   },
   {
     id: 3,
@@ -79,34 +93,37 @@ const caseStudies = [
       collections: "$1.2M/month",
       denialRate: "15%",
       daysInAR: "48",
-      staff: "5 in-house billers"
+      staff: "5 in-house billers",
     },
     after: {
       collections: "$1.56M/month",
       denialRate: "1%",
       daysInAR: "22",
-      staff: "0 in-house billers"
+      staff: "0 in-house billers",
     },
     timeline: "8 Months",
-    challenge: "Complex surgical procedures, multiple payers, and frequent coding updates led to high denial rates and significant revenue leakage.",
-    solution: "Deployed specialized orthopedic coding team, implemented AI-powered claim scrubbing, and established quality assurance processes with 99.5% accuracy.",
+    challenge:
+      "Complex surgical procedures, multiple payers, and frequent coding updates led to high denial rates and significant revenue leakage.",
+    solution:
+      "Deployed specialized orthopedic coding team, implemented AI-powered claim scrubbing, and established quality assurance processes with 99.5% accuracy.",
     results: [
       "30% increase in revenue",
       "99% clean claim rate",
       "54% faster payment processing",
-      "$400K annual savings on staffing"
+      "$400K annual savings on staffing",
     ],
-    testimonial: "\"The orthopedic coding expertise is unmatched. They understand the nuances of spinal procedures, joint replacements, and sports medicine coding better than anyone we've worked with.\"",
+    testimonial:
+      '"The orthopedic coding expertise is unmatched. They understand the nuances of spinal procedures, joint replacements, and sports medicine coding better than anyone we\'ve worked with."',
     author: "Dr. Rebecca Martinez",
-    role: "Managing Partner"
-  }
+    role: "Managing Partner",
+  },
 ];
 
 const stats = [
   { value: "$50M+", label: "Annual Client Recoveries" },
   { value: "95%", label: "Average Collection Increase" },
   { value: "30", label: "Days Reduction in A/R" },
-  { value: "1500+", label: "Successful Implementations" }
+  { value: "1500+", label: "Successful Implementations" },
 ];
 
 const CaseStudies = () => {
@@ -118,8 +135,7 @@ const CaseStudies = () => {
           <motion.div
             className="text-center max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
+            animate={{ opacity: 1, y: 0 }}>
             <span className="inline-block px-4 py-2 rounded-full bg-secondary/20 text-secondary text-sm font-medium mb-4">
               Success Stories
             </span>
@@ -127,7 +143,8 @@ const CaseStudies = () => {
               Real Results for Real Practices
             </h1>
             <p className="text-lg text-primary-foreground/80">
-              See how healthcare providers across specialties have transformed their revenue cycle with MedBill Pro.
+              See how healthcare providers across specialties have transformed
+              their revenue cycle with MedBill Pro.
             </p>
           </motion.div>
         </div>
@@ -144,10 +161,13 @@ const CaseStudies = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <div className="text-4xl font-bold text-primary mb-2">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
+                transition={{ delay: index * 0.1 }}>
+                <div className="text-4xl font-bold text-primary mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-sm text-muted-foreground">
+                  {stat.label}
+                </div>
               </motion.div>
             ))}
           </div>
@@ -165,8 +185,7 @@ const CaseStudies = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
+                transition={{ delay: index * 0.1 }}>
                 <div className="grid lg:grid-cols-3 gap-8">
                   {/* Main Content */}
                   <div className="lg:col-span-2 space-y-6">
@@ -179,14 +198,18 @@ const CaseStudies = () => {
                       </span>
                     </div>
 
-                    <h2 className="text-3xl font-bold text-foreground">{study.title}</h2>
+                    <h2 className="text-3xl font-bold text-foreground">
+                      {study.title}
+                    </h2>
 
                     <Card>
                       <CardHeader>
                         <CardTitle className="text-xl">The Challenge</CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <p className="text-muted-foreground">{study.challenge}</p>
+                        <p className="text-muted-foreground">
+                          {study.challenge}
+                        </p>
                       </CardContent>
                     </Card>
 
@@ -195,7 +218,9 @@ const CaseStudies = () => {
                         <CardTitle className="text-xl">Our Solution</CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <p className="text-muted-foreground">{study.solution}</p>
+                        <p className="text-muted-foreground">
+                          {study.solution}
+                        </p>
                       </CardContent>
                     </Card>
 
@@ -224,19 +249,31 @@ const CaseStudies = () => {
                           <div className="flex-1">
                             <div className="flex items-center gap-1 mb-3">
                               {[...Array(5)].map((_, i) => (
-                                <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                                <Star
+                                  key={i}
+                                  className="w-5 h-5 fill-yellow-400 text-yellow-400"
+                                />
                               ))}
                             </div>
-                            <p className="text-foreground italic mb-4">"{study.testimonial}"</p>
+                            <p className="text-foreground italic mb-4">
+                              "{study.testimonial}"
+                            </p>
                             <div className="flex items-center gap-2">
                               <div className="w-10 h-10 rounded-full bg-gradient-primary flex items-center justify-center">
                                 <span className="text-sm font-bold text-primary-foreground">
-                                  {study.author.split(' ').map(n => n[0]).join('')}
+                                  {study.author
+                                    .split(" ")
+                                    .map((n) => n[0])
+                                    .join("")}
                                 </span>
                               </div>
                               <div>
-                                <div className="font-semibold text-foreground">{study.author}</div>
-                                <div className="text-sm text-muted-foreground">{study.role}</div>
+                                <div className="font-semibold text-foreground">
+                                  {study.author}
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  {study.role}
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -256,20 +293,36 @@ const CaseStudies = () => {
                       </CardHeader>
                       <CardContent className="space-y-3">
                         <div className="flex justify-between items-center py-2 border-b border-destructive/20">
-                          <span className="text-muted-foreground">Monthly Collections</span>
-                          <span className="font-semibold text-destructive">{study.before.collections}</span>
+                          <span className="text-muted-foreground">
+                            Monthly Collections
+                          </span>
+                          <span className="font-semibold text-destructive">
+                            {study.before.collections}
+                          </span>
                         </div>
                         <div className="flex justify-between items-center py-2 border-b border-destructive/20">
-                          <span className="text-muted-foreground">Denial Rate</span>
-                          <span className="font-semibold text-destructive">{study.before.denialRate}</span>
+                          <span className="text-muted-foreground">
+                            Denial Rate
+                          </span>
+                          <span className="font-semibold text-destructive">
+                            {study.before.denialRate}
+                          </span>
                         </div>
                         <div className="flex justify-between items-center py-2 border-b border-destructive/20">
-                          <span className="text-muted-foreground">Days in A/R</span>
-                          <span className="font-semibold text-destructive">{study.before.daysInAR}</span>
+                          <span className="text-muted-foreground">
+                            Days in A/R
+                          </span>
+                          <span className="font-semibold text-destructive">
+                            {study.before.daysInAR}
+                          </span>
                         </div>
                         <div className="flex justify-between items-center py-2">
-                          <span className="text-muted-foreground">Billing Staff</span>
-                          <span className="font-semibold text-destructive">{study.before.staff}</span>
+                          <span className="text-muted-foreground">
+                            Billing Staff
+                          </span>
+                          <span className="font-semibold text-destructive">
+                            {study.before.staff}
+                          </span>
                         </div>
                       </CardContent>
                     </Card>
@@ -283,20 +336,36 @@ const CaseStudies = () => {
                       </CardHeader>
                       <CardContent className="space-y-3">
                         <div className="flex justify-between items-center py-2 border-b border-secondary/20">
-                          <span className="text-muted-foreground">Monthly Collections</span>
-                          <span className="font-semibold text-secondary">{study.after.collections}</span>
+                          <span className="text-muted-foreground">
+                            Monthly Collections
+                          </span>
+                          <span className="font-semibold text-secondary">
+                            {study.after.collections}
+                          </span>
                         </div>
                         <div className="flex justify-between items-center py-2 border-b border-secondary/20">
-                          <span className="text-muted-foreground">Denial Rate</span>
-                          <span className="font-semibold text-secondary">{study.after.denialRate}</span>
+                          <span className="text-muted-foreground">
+                            Denial Rate
+                          </span>
+                          <span className="font-semibold text-secondary">
+                            {study.after.denialRate}
+                          </span>
                         </div>
                         <div className="flex justify-between items-center py-2 border-b border-secondary/20">
-                          <span className="text-muted-foreground">Days in A/R</span>
-                          <span className="font-semibold text-secondary">{study.after.daysInAR}</span>
+                          <span className="text-muted-foreground">
+                            Days in A/R
+                          </span>
+                          <span className="font-semibold text-secondary">
+                            {study.after.daysInAR}
+                          </span>
                         </div>
                         <div className="flex justify-between items-center py-2">
-                          <span className="text-muted-foreground">Billing Staff</span>
-                          <span className="font-semibold text-secondary">{study.after.staff}</span>
+                          <span className="text-muted-foreground">
+                            Billing Staff
+                          </span>
+                          <span className="font-semibold text-secondary">
+                            {study.after.staff}
+                          </span>
                         </div>
                       </CardContent>
                     </Card>
@@ -333,17 +402,25 @@ const CaseStudies = () => {
             <Card className="p-8">
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="font-semibold text-foreground mb-4">Average Client Improvements</h3>
+                  <h3 className="font-semibold text-foreground mb-4">
+                    Average Client Improvements
+                  </h3>
                   <div className="space-y-4">
                     {[
                       { label: "Revenue Increase", value: "20-35%" },
                       { label: "Denial Rate Reduction", value: "50-75%" },
                       { label: "A/R Days Reduction", value: "40-60%" },
-                      { label: "Cost Savings", value: "$100K-$400K/year" }
+                      { label: "Cost Savings", value: "$100K-$400K/year" },
                     ].map((item, i) => (
-                      <div key={i} className="flex justify-between items-center py-2 border-b">
-                        <span className="text-muted-foreground">{item.label}</span>
-                        <span className="font-bold text-primary">{item.value}</span>
+                      <div
+                        key={i}
+                        className="flex justify-between items-center py-2 border-b">
+                        <span className="text-muted-foreground">
+                          {item.label}
+                        </span>
+                        <span className="font-bold text-primary">
+                          {item.value}
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -351,13 +428,17 @@ const CaseStudies = () => {
                 <div className="flex items-center">
                   <div className="w-full">
                     <div className="bg-primary/10 rounded-xl p-6 text-center">
-                      <div className="text-4xl font-bold text-primary mb-2">$250K</div>
-                      <div className="text-sm text-muted-foreground mb-4">Average Annual Savings</div>
+                      <div className="text-4xl font-bold text-primary mb-2">
+                        $250K
+                      </div>
+                      <div className="text-sm text-muted-foreground mb-4">
+                        Average Annual Savings
+                      </div>
                       <Button size="lg" className="w-full" asChild>
-                        <Link to="/pricing">
+                        {/* <Link to="/pricing">
                           Get Your Custom Quote
                           <ArrowRight className="w-4 h-4 ml-2" />
-                        </Link>
+                        </Link> */}
                       </Button>
                     </div>
                   </div>

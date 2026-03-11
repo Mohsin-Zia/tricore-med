@@ -26,7 +26,7 @@ export const CTASection = ({
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
+            backgroundImage: "url('/2.jpeg')",
           }}
         />
         {/* Lighter gradient overlay for better visibility */}
@@ -56,14 +56,12 @@ export const CTASection = ({
           initial={{ opacity: 0, y: 30, scale: 0.95 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, type: "spring", stiffness: 200 }}
-        >
+          transition={{ duration: 0.6, type: "spring", stiffness: 200 }}>
           {/* Animated title */}
           <motion.h2
             className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6 tracking-tight"
             whileHover={{ scale: 1.02 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
+            transition={{ type: "spring", stiffness: 300 }}>
             {title}
           </motion.h2>
 
@@ -73,8 +71,7 @@ export const CTASection = ({
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
+            transition={{ delay: 0.2 }}>
             {description}
           </motion.p>
 
@@ -84,8 +81,7 @@ export const CTASection = ({
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-          >
+            transition={{ delay: 0.4 }}>
             {/* Primary button with animations */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <motion.div
@@ -95,8 +91,7 @@ export const CTASection = ({
                     "0 0 0 10px rgba(147, 51, 234, 0)",
                   ],
                 }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
+                transition={{ duration: 2, repeat: Infinity }}>
                 <Button size="lg" variant="secondary" asChild>
                   <Link to={primaryButtonLink}>
                     <motion.div
@@ -106,8 +101,7 @@ export const CTASection = ({
                         duration: 1.5,
                         repeat: Infinity,
                         repeatDelay: 1,
-                      }}
-                    >
+                      }}>
                       {primaryButtonText}
                       <ArrowRight className="ml-2 w-5 h-5" />
                     </motion.div>
@@ -124,14 +118,12 @@ export const CTASection = ({
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.5 }}
-              >
+                transition={{ delay: 0.5 }}>
                 <Button
                   size="lg"
                   variant="outline"
                   className="bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
-                  asChild
-                >
+                  asChild>
                   <a href="tel:+1 (201) 699-6877">
                     <motion.div
                       animate={{ rotate: [0, 10, -10, 0] }}
@@ -139,8 +131,7 @@ export const CTASection = ({
                         duration: 2,
                         repeat: Infinity,
                         repeatDelay: 3,
-                      }}
-                    >
+                      }}>
                       <Phone className="mr-2 w-5 h-5" />
                     </motion.div>
                     Call +1 (201) 699-6877
@@ -154,8 +145,7 @@ export const CTASection = ({
           <motion.div
             className="absolute top-10 left-10 text-primary-foreground/20"
             {...floatingAnimation}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-          >
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}>
             <Sparkles className="w-6 h-6" />
           </motion.div>
           <motion.div
@@ -166,8 +156,7 @@ export const CTASection = ({
               repeat: Infinity,
               ease: "easeInOut",
               delay: 1,
-            }}
-          >
+            }}>
             <Sparkles className="w-8 h-8" />
           </motion.div>
         </motion.div>
