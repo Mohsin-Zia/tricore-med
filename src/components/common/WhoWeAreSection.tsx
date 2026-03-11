@@ -69,8 +69,7 @@ export const WhoWeAreSection = () => {
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-          >
+            transition={{ duration: 0.7, ease: "easeOut" }}>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
@@ -91,8 +90,7 @@ export const WhoWeAreSection = () => {
               whileHover={{
                 y: -4,
                 boxShadow: "0 15px 25px rgba(0,0,0,0.2)",
-              }}
-            >
+              }}>
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                   <TrendingUp className="w-6 h-6 text-primary" />
@@ -115,13 +113,11 @@ export const WhoWeAreSection = () => {
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
-          >
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}>
             <motion.span
               className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-5"
               whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
+              transition={{ type: "spring", stiffness: 300 }}>
               <div className="flex items-center gap-2">
                 <Users className="w-4 h-4" />
                 Who We Are
@@ -136,7 +132,7 @@ export const WhoWeAreSection = () => {
             <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
               At{" "}
               <span className="font-semibold text-foreground">
-                Tricore Med Billing
+                Tricore Medical Billing
               </span>
               , we are dedicated to elevating the standard of medical billing
               for healthcare providers nationwide. Our mission is simple:
@@ -158,14 +154,12 @@ export const WhoWeAreSection = () => {
               variants={staggerContainer}
               initial="initial"
               whileInView="animate"
-              viewport={{ once: true, margin: "-30px" }}
-            >
+              viewport={{ once: true, margin: "-30px" }}>
               {highlights.map((item) => (
                 <motion.div
                   key={item.title}
                   className="group flex items-start gap-3 p-4 rounded-xl bg-muted/40 border border-border/50 hover:border-primary/30 hover:bg-primary/5 transition-all duration-300"
-                  whileHover={{ y: -2 }}
-                >
+                  whileHover={{ y: -2 }}>
                   <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
                     <item.icon className="w-4.5 h-4.5 text-primary" />
                   </div>

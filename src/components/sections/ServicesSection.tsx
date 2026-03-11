@@ -46,13 +46,11 @@ export const ServicesSection = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
+          transition={{ duration: 0.6 }}>
           <motion.span
             className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4"
             whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
+            transition={{ type: "spring", stiffness: 300 }}>
             <div className="flex items-center gap-2">
               <Briefcase className="w-4 h-4" />
               Our Services
@@ -61,8 +59,7 @@ export const ServicesSection = () => {
           <motion.h2
             className="text-3xl md:text-4xl font-bold text-foreground mb-4"
             whileHover={{ scale: 1.02 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
+            transition={{ type: "spring", stiffness: 300 }}>
             Comprehensive Medical Billing and Consulting
           </motion.h2>
           <motion.p
@@ -70,11 +67,11 @@ export const ServicesSection = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            Tricore Med Billing provides expert solutions designed to minimize
-            errors, speed up reimbursements, and maintain full compliance —
-            allowing you to stay focused on delivering exceptional patient care.
+            transition={{ delay: 0.2 }}>
+            Tricore Medical Billing provides expert solutions designed to
+            minimize errors, speed up reimbursements, and maintain full
+            compliance — allowing you to stay focused on delivering exceptional
+            patient care.
           </motion.p>
         </motion.div>
 
@@ -83,8 +80,7 @@ export const ServicesSection = () => {
           variants={staggerContainer}
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true, margin: "-50px" }}
-        >
+          viewport={{ once: true, margin: "-50px" }}>
           {featuredServices.map((service, index) => (
             <motion.div key={service.id} variants={staggerItem}>
               <ServiceCard
@@ -104,8 +100,7 @@ export const ServicesSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-        >
+          transition={{ delay: 0.4 }}>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Button size="lg" variant="outline" asChild>
               <Link to="/services">
@@ -117,8 +112,7 @@ export const ServicesSection = () => {
                     repeat: Infinity,
                     repeatDelay: 1,
                   }}
-                  className="ml-2 inline-block"
-                >
+                  className="ml-2 inline-block">
                   <ArrowRight className="w-5 h-5" />
                 </motion.span>
               </Link>

@@ -45,15 +45,13 @@ const Specialties = () => {
             className="text-center max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+            transition={{ duration: 0.6 }}>
             {/* Title */}
             <motion.h1
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-            >
+              transition={{ delay: 0.2 }}>
               {specialties.length}+ Medical Specialties Supported
             </motion.h1>
 
@@ -62,8 +60,7 @@ const Specialties = () => {
               className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-            >
+              transition={{ delay: 0.4 }}>
               Expert billing services tailored to your specific medical
               specialty with precision and care.
             </motion.p>
@@ -73,8 +70,7 @@ const Specialties = () => {
               className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-            >
+              transition={{ delay: 0.5 }}>
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all">
                 <div className="text-5xl md:text-6xl font-bold text-teal-light mb-2">
                   98%
@@ -99,92 +95,96 @@ const Specialties = () => {
       </section>
 
       {/* Main Specialties Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-[#f4f7fb] min-h-screen">
+        <div className="container mx-auto px-4 max-w-7xl">
           {/* Section Header */}
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <div className="text-center mb-14">
+            <p className="text-[#2563eb] font-semibold uppercase tracking-widest text-sm mb-3">
+              Our Most Requested Medical Billing Services
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0f1d3a] mb-5">
               Medical Billing Specialties
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              At Tricor Medical Billing, we understand that every medical
-              specialty has unique billing and coding requirements. Our team of
-              experts is trained to handle the nuances of diverse medical
-              fields, ensuring accurate claims, timely reimbursements, and
-              streamlined revenue cycles.
+            <p className="text-gray-500 max-w-2xl mx-auto text-lg leading-relaxed">
+              Expert billing services tailored to your specific medical
+              specialty with precision and care.
             </p>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-4 leading-relaxed">
-              No matter your specialty, we provide tailored billing solutions
-              that help your practice thrive financially while you focus on
-              patient care.
-            </p>
-          </motion.div>
+          </div>
 
-          {/* All Specialties Grid - No Filter, All on Main Page */}
+          {/* Grid */}
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"
             variants={staggerContainer}
             initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: "-50px" }}
-          >
+            animate="animate">
             {specialties.map((specialty) => {
+              const Icon = specialty.icon;
               const isHovered = hoveredSpecialty === specialty.id;
 
               return (
                 <motion.div
                   key={specialty.id}
                   variants={staggerItem}
-                  className="relative group"
+                  className="relative cursor-pointer"
                   onMouseEnter={() => setHoveredSpecialty(specialty.id)}
-                  onMouseLeave={() => setHoveredSpecialty(null)}
-                  whileHover={{ y: -8 }}
-                  transition={{ duration: 0.3, ease: "easeOut" }}
-                >
-                  {/* Main Card with Hover Fill Effect */}
-                  <div className="relative h-full bg-card rounded-xl p-6 border-2 border-border overflow-hidden">
-                    {/* Animated Background Fill on Hover */}
+                  onMouseLeave={() => setHoveredSpecialty(null)}>
+                  <motion.div
+                    className="relative h-full rounded-2xl overflow-hidden border-2 transition-all duration-300"
+                    animate={{
+                      borderColor: isHovered ? "#2563eb" : "#e2e8f0",
+                      boxShadow: isHovered
+                        ? "0 12px 40px rgba(37,99,235,0.25)"
+                        : "0 2px 8px rgba(0,0,0,0.06)",
+                      y: isHovered ? -6 : 0,
+                    }}
+                    transition={{ duration: 0.25, ease: "easeOut" }}>
+                    {/* Animated blue fill background */}
                     <motion.div
-                      className="absolute inset-0 bg-gradient-to-br from-teal/10 to-teal/5"
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      animate={{
-                        opacity: isHovered ? 1 : 0,
-                        scale: isHovered ? 1 : 0.95,
+                      className="absolute inset-0"
+                      style={{
+                        background:
+                          "linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)",
                       }}
-                      transition={{ duration: 0.3 }}
+                      animate={{ opacity: isHovered ? 1 : 0 }}
+                      transition={{ duration: 0.25, ease: "easeOut" }}
                     />
 
-                    {/* Border Glow on Hover */}
-                    <motion.div
-                      className="absolute inset-0 rounded-xl"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: isHovered ? 1 : 0 }}
-                      transition={{ duration: 0.3 }}
-                      style={{
-                        boxShadow: isHovered
-                          ? "inset 0 0 0 2px rgba(45, 212, 191, 0.5)"
-                          : "none",
-                      }}
+                    {/* White card background (behind fill) */}
+                    <div
+                      className="absolute inset-0 bg-white"
+                      style={{ zIndex: -1 }}
                     />
 
                     {/* Content */}
-                    <div className="relative z-10 flex flex-col items-center text-center">
-                      {/* Title */}
-                      <h3 className="font-semibold text-foreground text-base mb-2 group-hover:text-primary transition-colors">
-                        {specialty.name}
-                      </h3>
+                    <div className="relative z-10 flex flex-col items-center text-center p-5 pt-6">
+                      {/* Icon circle */}
+                      <motion.div
+                        className="w-16 h-16 rounded-full flex items-center justify-center mb-4 transition-all duration-250"
+                        animate={{
+                          backgroundColor: isHovered
+                            ? "rgba(255,255,255,0.18)"
+                            : "#eff6ff",
+                        }}>
+                        <motion.div
+                          animate={{ color: isHovered ? "#ffffff" : "#2563eb" }}
+                          transition={{ duration: 0.2 }}>
+                          <Icon size={30} strokeWidth={1.6} />
+                        </motion.div>
+                      </motion.div>
 
-                      {/* Description - Expand on hover */}
-                      <AnimatePresence mode="wait">
+                      {/* Title */}
+                      <motion.h3
+                        className="font-semibold text-sm leading-tight mb-2"
+                        animate={{ color: isHovered ? "#ffffff" : "#0f1d3a" }}
+                        transition={{ duration: 0.2 }}>
+                        {specialty.name}
+                      </motion.h3>
+
+                      {/* Description - reveal on hover */}
+                      <AnimatePresence>
                         {isHovered && (
                           <motion.p
-                            className="text-sm text-muted-foreground leading-relaxed"
+                            className="text-xs text-white/85 leading-relaxed"
                             initial={{ opacity: 0, height: 0, marginTop: 0 }}
                             animate={{
                               opacity: 1,
@@ -192,27 +192,27 @@ const Specialties = () => {
                               marginTop: 8,
                             }}
                             exit={{ opacity: 0, height: 0, marginTop: 0 }}
-                            transition={{ duration: 0.3 }}
-                          >
+                            transition={{ duration: 0.25 }}>
                             {specialty.description}
                           </motion.p>
                         )}
                       </AnimatePresence>
 
-                      {/* Arrow indicator on hover */}
-                      <motion.div
-                        className="mt-3 text-teal"
-                        initial={{ opacity: 0, x: -10 }}
-                        animate={{
-                          opacity: isHovered ? 1 : 0,
-                          x: isHovered ? 0 : -10,
-                        }}
-                        transition={{ duration: 0.3, delay: 0.1 }}
-                      >
-                        <ArrowRight className="w-5 h-5" />
-                      </motion.div>
+                      {/* Arrow on hover */}
+                      <AnimatePresence>
+                        {isHovered && (
+                          <motion.div
+                            className="mt-3"
+                            initial={{ opacity: 0, x: -8 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: -8 }}
+                            transition={{ duration: 0.2, delay: 0.05 }}>
+                            <ArrowRight size={18} className="text-white/80" />
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </div>
-                  </div>
+                  </motion.div>
                 </motion.div>
               );
             })}
@@ -227,8 +227,7 @@ const Specialties = () => {
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+            viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Why Choose Tricore Medical Billing
             </h2>
@@ -276,8 +275,7 @@ const Specialties = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  whileHover={{ y: -5 }}
-                >
+                  whileHover={{ y: -5 }}>
                   <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-teal/10 to-teal/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <Icon className="w-7 h-7 text-teal" />
                   </div>
@@ -311,8 +309,7 @@ const Specialties = () => {
             className="text-center max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+            viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our Commitment
             </h2>
@@ -331,8 +328,7 @@ const Specialties = () => {
               <Button
                 size="lg"
                 className="bg-white text-primary hover:bg-white/90 shadow-xl"
-                asChild
-              >
+                asChild>
                 <Link to="/contact">
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -342,8 +338,7 @@ const Specialties = () => {
                 size="lg"
                 variant="outline"
                 className="bg-transparent border-white/40 text-white hover:bg-white/10"
-                asChild
-              >
+                asChild>
                 <Link to="/services">Our Services</Link>
               </Button>
             </div>
@@ -358,8 +353,7 @@ const Specialties = () => {
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+            viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Frequently Asked Questions
             </h2>
@@ -372,22 +366,22 @@ const Specialties = () => {
             {[
               {
                 q: "What makes Tricore Medical Billing different from other billing companies?",
-                a: "Tricore combines decades of industry experience, advanced technology, and personalized service to deliver accurate, transparent, and efficient billing solutions. We focus on maximizing reimbursements, minimizing denials, and simplifying your revenue cycle so you can focus on patient care.",
+                a: "Tricore Medical Billing combines decades of industry experience, advanced technology, and personalized service to deliver accurate, transparent, and efficient billing solutions. We focus on maximizing reimbursements, minimizing denials, and simplifying your revenue cycle so you can focus on patient care.",
               },
               {
                 q: "What types of practices do you work with?",
                 a: "We work with practices of all sizes—from solo providers and small clinics to multi-location groups. Our solutions are customized to fit the unique workflows, specialties, and goals of each practice.",
               },
               {
-                q: "How does Tricore help improve revenue and cash flow?",
+                q: "How does Tricore Medical Billing help improve revenue and cash flow?",
                 a: "Our team ensures accurate coding, timely claim submission, and proactive denial management. Combined with practice audits and revenue cycle optimization, these steps reduce errors, accelerate reimbursements, and maximize your practice revenue.",
               },
               {
                 q: "Are your services compliant with healthcare regulations?",
-                a: "Absolutely. Tricore is fully committed to regulatory compliance and industry standards, ensuring all billing and coding processes follow CMS, HIPAA, and payer-specific guidelines to minimize risk and protect your practice.",
+                a: "Absolutely. Tricore Medical Billing is fully committed to regulatory compliance and industry standards, ensuring all billing and coding processes follow CMS, HIPAA, and payer-specific guidelines to minimize risk and protect your practice.",
               },
               {
-                q: "How does Tricore support practices beyond billing?",
+                q: "How does Tricore Medical Billing support practices beyond billing?",
                 a: "Beyond traditional billing, we offer credentialing & enrollment, practice audits, telehealth and RPM billing, and strategic consulting. Our goal is to provide end-to-end solutions that strengthen your practice’s financial health and operational efficiency.",
               },
               {
@@ -402,8 +396,7 @@ const Specialties = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-              >
+                transition={{ delay: index * 0.05 }}>
                 {item.isCta ? (
                   <div className="text-center">
                     <p className="text-lg text-foreground font-medium mb-4">
