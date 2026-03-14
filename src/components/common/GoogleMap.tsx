@@ -19,7 +19,7 @@ export const GoogleMap = ({
   initialLocation = {
     lat: 40.740769,
     lng: -74.004258,
-    address: "123 Medical Center Dr., Suite 500, New York, NY 10001"
+    address: "25 Hamilton Ave, Clifton, NJ 07011, USA"
   },
   onLocationSelect,
   height = "400px",

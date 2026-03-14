@@ -59,7 +59,7 @@ export const Hero = () => {
             <div className="mb-6 inline-block">
               <span className="inline-flex items-center px-4 py-2 rounded-full bg-teal/20 text-white text-sm font-medium border border-white/20">
                 <Sparkles className="w-4 h-4 mr-2" />
-                Tricor Medical Billing | Modern Revenue Solutions
+                Tricore Medical Billing | Modern Revenue Solutions
               </span>
             </div>
 
@@ -80,7 +80,7 @@ export const Hero = () => {
               consulting solutions designed to simplify your practice operations
               and enhance financial performance. Our comprehensive services
               include full-service billing, telehealth and RPM support, as well
-              as provider credentialing — all tailored to help your practice
+              as provider credentialing all tailored to help your practice
               thrive.
             </p>
 

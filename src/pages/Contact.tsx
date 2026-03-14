@@ -18,15 +18,15 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    content: "contact@tricoremd.com",
+    content: "contact@tricoremedicalbilling.com",
     description: "We respond within 24 hours",
-    href: "mailto:contact@tricoremd.com",
+    href: "mailto:contact@tricoremedicalbilling.com",
   },
   {
     icon: MapPin,
     title: "Office",
-    content: "123 Medical Center Dr.",
-    description: "Suite 500, New York, NY 10001",
+    content: "25 Hamilton Ave, Clifton, NJ 07011, USA",
+    description: "Clifton, NJ 07011, USA",
     href: "#",
   },
   {
@@ -203,7 +203,7 @@ const Contact = () => {
                     lat: 40.740769,
                     lng: -74.004258,
                     address:
-                      "123 Medical Center Dr., Suite 500, New York, NY 10001",
+                      "25 Hamilton Ave, Clifton, NJ 07011, USA",
                   }}
                   onLocationSelect={(location) => {
                     console.log("Selected location:", location);

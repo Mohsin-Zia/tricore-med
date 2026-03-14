@@ -26,19 +26,15 @@ export const SpecialtiesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <span className="inline-block px-4 py-2 rounded-full bg-secondary/10 text-secondary text-sm font-medium mb-4">
+          {/* <span className="inline-block px-4 py-2 rounded-full bg-secondary/10 text-secondary text-sm font-medium mb-4">
             75+ Specialties
-          </span>
+          </span> */}
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Electronic Health Records (EHR) Systems We Support for Medical
-            Billing Services
+            Medical Billing Specialties
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            At Tricore Medical Billing, we understand that seamless integration
-            with your Electronic Health Records (EHR) system is essential for
-            efficient and accurate medical billing. Our team is experienced in
-            handling claims, coding, and billing workflows across a wide range
-            of EHR platforms, ensuring your revenue cycle runs smoothly.
+            We Provide Billing Solutions for various medical practices <br />
+            <span>and healthcare providers</span>
           </p>
         </motion.div>
 

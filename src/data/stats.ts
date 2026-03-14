@@ -9,7 +9,7 @@ export interface Stat {
 export const stats: Stat[] = [
   {
     id: "providers",
-    value: 1500,
+    value: 150,
     suffix: "+",
     label: "Healthcare Providers",
     description: "Trusted by practices nationwide"
@@ -23,7 +23,7 @@ export const stats: Stat[] = [
   },
   {
     id: "specialties",
-    value: 75,
+    value: 40,
     suffix: "+",
     label: "Medical Specialties",
     description: "Comprehensive specialty coverage"

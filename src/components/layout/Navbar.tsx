@@ -9,6 +9,7 @@ import {
   FileText,
   Shield,
   Scale,
+  Building2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -27,7 +28,16 @@ const navItems = [
     })),
   },
   { label: "Specialties", href: "/specialties" },
-  { label: "About", href: "/about" },
+  {
+    label: "Company",
+    href: "/about",
+    hasDropdown: true,
+    items: [
+      { label: "About", href: "/about", description: "Learn about our company" },
+      { label: "Privacy Policy", href: "/privacy-policy", description: "Our privacy policy" },
+      { label: "Terms & Conditions", href: "/terms-of-service", description: "Terms of service" },
+    ],
+  },
   // { label: "Pricing", href: "/pricing" },
   { label: "Contact", href: "/contact" },
 ];
@@ -200,9 +210,9 @@ export const Navbar = () => {
                                 <div className="font-medium text-foreground group-hover:text-primary transition-colors">
                                   {subItem.label}
                                 </div>
-                                <div className="text-xs text-muted-foreground mt-0.5 line-clamp-2">
+                                {/* <div className="text-xs text-muted-foreground mt-0.5 line-clamp-2">
                                   {subItem.description}
-                                </div>
+                                </div> */}
                               </Link>
                             </motion.div>
                           ))}

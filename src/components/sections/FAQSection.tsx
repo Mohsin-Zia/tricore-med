@@ -98,7 +98,7 @@ export const FAQSection = ({ limit, showTitle = true }: FAQSectionProps) => {
                       }}
                     />
                     <div className="relative">
-                      <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline py-4">
+                      <AccordionTrigger className="text-left text-base font-semibold text-foreground hover:no-underline py-4">
                         <motion.span
                           className="flex items-center gap-3"
                           whileHover={{ x: 5 }}

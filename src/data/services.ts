@@ -22,8 +22,8 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    id: "medical-billing",
-    title: "Medical Billing",
+    id: "medical-billing ",
+    title: "Medical Billing & Coding",
     shortDescription: "Boost revenue and minimize claim denials with our expert billing team.",
     description: "Increase revenue and reduce claim denials with our experienced billing team. We focus on accurate submissions, faster reimbursements, and efficient accounts receivable management to keep your cash flow steady.",
     icon: FileText,
@@ -43,7 +43,7 @@ export const services: Service[] = [
     ]
   },
   {
-    id: "credentialing",
+    id: "credentialing" ,
     title: "Credentialing and Enrollment",
     shortDescription: "Simplify insurance credentialing and enrollment with our specialists.",
     description: "Streamline insurance credentialing and payer enrollment with expert guidance, allowing your practice to concentrate on delivering high-quality patient care.",
@@ -65,67 +65,65 @@ export const services: Service[] = [
   },
   {
     id: "rcm",
-    title: "Revenue Cycle Management (RCM)",
-    shortDescription: "Optimize cash flow, enhance coding accuracy, and maximize denial recoveries.",
-    description: "Strengthen financial performance with comprehensive, end-to-end RCM solutions that improve coding accuracy, accelerate cash flow, and maximize denial recoveries.",
-    icon: TrendingUp,
+    title: "Advanced Eligibility Verification",
+    shortDescription: "Streamline insurance verification and enrollment with our specialists.",
+    description: "Streamline insurance verification and enrollment with our specialists, allowing your practice to concentrate on delivering high-quality patient care.",
+    icon: Award,
     benefits: [
-      "Increase collections by 20-30%",
-      "Reduce days in A/R significantly",
-      "Improve first-pass claim rate",
-      "Enhanced financial visibility"
+      "Faster network enrollment",
+      "Reduced verification delays",
+      "Complete documentation management",
+      "Ongoing verification maintenance"
     ],
     features: [
-      "Pre-authorization services",
-      "Charge capture optimization",
-      "Claims management and scrubbing",
-      "Payment posting and reconciliation",
-      "Denial management and prevention",
-      "Financial reporting and analytics"
+      "Initial verification applications",
+      "Re-verification and renewals",
+      "CAQH profile management",
+      "Payer enrollment and contracting",
+      "License and certificate tracking"
     ]
   },
   {
-    id: "telehealth-billing",
-    title: "Telehealth Medical Billing",
-    shortDescription: "Protect your virtual care revenue with precise telehealth billing services.",
-    description: "Safeguard your virtual care revenue with precise telehealth billing, timely claim submissions, and reliable reimbursements.",
-    icon: Video,
+    id: "new-practice-setup",
+    title: "New Practice Setup",
+    shortDescription: "Get your practice up and running with our expert setup services.",
+    description: "Get your practice up and running with our expert setup services, allowing your practice to concentrate on delivering high-quality patient care.",
+    icon: Award,
     benefits: [
-      "Specialized telehealth coding expertise",
-      "Compliance with virtual care regulations",
-      "Maximized telehealth reimbursement",
-      "Reduced telehealth claim denials"
+      "Faster network enrollment",
+      "Reduced verification delays",
+      "Complete documentation management",
+      "Ongoing verification maintenance"
     ],
     features: [
-      "Virtual visit code selection",
-      "Telehealth modifier application",
-      "Platform-specific billing requirements",
-      "Real-time telehealth claim tracking",
-      "Virtual care compliance review",
-      "Telehealth revenue optimization"
+      "Initial verification applications",
+      "Re-verification and renewals",
+      "CAQH profile management",
+      "Payer enrollment and contracting",
+      "License and certificate tracking"
     ]
   },
-  {
-    id: "rpm-billing",
-    title: "RPM Medical Billing",
-    shortDescription: "Let our Remote Patient Monitoring billing experts handle your chronic care claims.",
-    description: "Ensure full revenue capture for Remote Patient Monitoring services with compliant, accurate billing and proactive claim management.",
-    icon: Activity,
-    benefits: [
-      "Expert RPM billing knowledge",
-      "CMS compliance assurance",
-      "Maximum RPM revenue capture",
-      "Accurate time-based billing"
-    ],
-    features: [
-      "RPM device setup billing",
-      "Daily/monthly time tracking",
-      "Chronic care management billing",
-      "Remote physiologic monitoring",
-      "Care coordination billing",
-      "RPM compliance documentation"
-    ]
-  },
+  // {
+  //   id: "rpm-billing",
+  //   title: "RPM Medical Billing",
+  //   shortDescription: "Let our Remote Patient Monitoring billing experts handle your chronic care claims.",
+  //   description: "Ensure full revenue capture for Remote Patient Monitoring services with compliant, accurate billing and proactive claim management.",
+  //   icon: Activity,
+  //   benefits: [
+  //     "Expert RPM billing knowledge",
+  //     "CMS compliance assurance",
+  //     "Maximum RPM revenue capture",
+  //     "Accurate time-based billing"
+  //   ],
+  //   features: [
+  //     "RPM device setup billing",
+  //     "Daily/monthly time tracking",
+  //     "Chronic care management billing",
+  //     "Remote physiologic monitoring",
+  //     "Care coordination billing",
+  //     "RPM compliance documentation"
+  //   ]
+  // },
   {
     id: "free-practice-audit",
     title: "Free Practice Audit",
@@ -151,7 +149,7 @@ export const services: Service[] = [
   //   id: "dme-billing",
   //   title: "DME Billing Services",
   //   shortDescription: "Expert Durable Medical Equipment billing with surgical precision.",
-  //   description: "Axaline Medical Billing expertly manages the Durable Medical Equipment (DME) revenue cycle by bridging the gap between clinical documentation and complex payer requirements, ensuring every claim is processed with surgical precision.",
+  //   description: "Tricore Medical Billing expertly manages the Durable Medical Equipment (DME) revenue cycle by bridging the gap between clinical documentation and complex payer requirements, ensuring every claim is processed with surgical precision.",
   //   icon: Shield,
   //   benefits: [
   //     "100% submission accuracy",

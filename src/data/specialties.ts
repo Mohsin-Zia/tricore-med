@@ -319,5 +319,5 @@ export const specialties = [
   },
 ];
 
-// Featured specialties - prioritized with Axaline's confirmed specialties first
+// Featured specialties - prioritized with trricore's confirmed specialties first
 export const featuredSpecialties = specialties.slice(0, 8);

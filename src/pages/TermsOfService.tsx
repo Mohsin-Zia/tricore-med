@@ -22,7 +22,7 @@ import { PageWrapper } from "@/components/layout/PageWrapper";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const TermsOfService = () => {
-  const effectiveDate = "January 1, 2025";
+  const effectiveDate = "Legal Terms & Conditions";
 
   const tableOfContents = [
     { number: "1", title: "Acceptance of Terms" },
@@ -117,12 +117,12 @@ const TermsOfService = () => {
             <div className="inline-flex items-center gap-2 bg-white/15 border border-white/30 rounded-full px-4 py-2 mb-6">
               <CheckCircle2 className="w-4 h-4 text-white/80" />
               <span className="text-white/90 text-sm font-medium">
-                Effective: {effectiveDate}
+                {effectiveDate}
               </span>
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-              Legal Terms &amp; Conditions
+               Terms &amp; Conditions
             </h1>
             <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
               Please read these terms carefully before using our website or
@@ -150,12 +150,15 @@ const TermsOfService = () => {
                 management. Please read these terms carefully before using our
                 website or engaging with our services.
               </p>
-              <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                By accessing or using our website, you agree to comply with and
-                be bound by these Terms &amp; Conditions. If you do not agree
-                with any part of these terms, please do not use our website or
-                services.
-              </p>
+              <div className="mt-6 p-4 bg-sky-50 border border-sky-200 rounded-xl flex items-start gap-3 max-w-3xl mx-auto">
+                <AlertTriangle className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
+                <p className="text-blue-400 leading-relaxed">
+                  By accessing or using our website, you agree to comply with and
+                  be bound by these Terms &amp; Conditions. If you do not agree
+                  with any part of these terms, please do not use our website or
+                  services.
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -706,8 +709,8 @@ const TermsOfService = () => {
                 {
                   icon: Mail,
                   label: "Email",
-                  value: "contact@tricoremed.com",
-                  href: "mailto:contact@tricoremed.com",
+                  value: "contact@tricoremedicalbilling.com",
+                  href: "mailto:contact@tricoremedicalbilling.com",
                 },
               ].map((item) => {
                 const Icon = item.icon;

@@ -13,7 +13,7 @@ const Specialties = () => {
 
   return (
     <PageWrapper>
-      {/* Hero Section - Matching Axaline Design */}
+      {/* Hero Section - Matching Tricore Medical Billing Design */}
       <section className="py-20 md:py-28 relative overflow-hidden">
         {/* Medical Background Image */}
         <div className="absolute inset-0 z-0 overflow-hidden">
@@ -220,7 +220,7 @@ const Specialties = () => {
         </div>
       </section>
 
-      {/* Why Choose Axaline Section */}
+      {/* Why Choose Tricore Section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <motion.div

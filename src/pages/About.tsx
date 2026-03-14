@@ -437,123 +437,118 @@ const About = () => {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section
-        id="journey"
-        ref={journeySectionRef}
-        className="py-20 bg-background overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
-              Our Journey
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              From a small team with a big vision to an industry leader.
-            </p>
-          </div>
+      {/* Timeline - Commented Out */}
+      {false && (
+        <section
+          id="journey"
+          ref={journeySectionRef}
+          className="py-20 bg-background overflow-hidden">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-foreground mb-4">
+                Our Journey
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                From a small team with a big vision to an industry leader.
+              </p>
+            </div>
 
-          <div className="max-w-5xl mx-auto">
-            <div className="relative">
-              {/* Animated center line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-transparent via-primary to-transparent opacity-30" />
+            <div className="max-w-5xl mx-auto">
+              <div className="relative">
+                <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-transparent via-primary to-transparent opacity-30" />
 
-              {milestones.map((milestone, index) => {
-                const isLeft = index % 2 === 0;
-                return (
-                  <div
-                    key={index}
-                    className="milestone-wrapper relative flex items-center mb-16">
-                    {/* Content Box */}
+                {milestones.map((milestone, index) => {
+                  const isLeft = index % 2 === 0;
+                  return (
                     <div
-                      className={`w-5/12 ${isLeft ? "text-right pr-12" : "text-left pl-12 ml-auto"}`}>
+                      key={index}
+                      className="milestone-wrapper relative flex items-center mb-16">
                       <div
-                        className={`milestone-box bg-card rounded-xl p-6 shadow-card hover:shadow-lg transition-all relative overflow-hidden group`}>
-                        {/* Arrow pointing to center line */}
+                        className={`w-5/12 ${isLeft ? "text-right pr-12" : "text-left pl-12 ml-auto"}`}>
                         <div
-                          className={`milestone-arrow absolute top-1/2 ${
-                            isLeft
-                              ? "right-0 translate-x-1/2 -translate-y-1/2"
-                              : "left-0 -translate-x-1/2 -translate-y-1/2"
-                          } z-10`}></div>
+                          className={`milestone-box bg-card rounded-xl p-6 shadow-card hover:shadow-lg transition-all relative overflow-hidden group`}>
+                          <div
+                            className={`milestone-arrow absolute top-1/2 ${
+                              isLeft
+                                ? "right-0 translate-x-1/2 -translate-y-1/2"
+                                : "left-0 -translate-x-1/2 -translate-y-1/2"
+                            } z-10`}></div>
 
-                        {/* Decorative background pattern */}
-                        <div className="absolute inset-0 opacity-5 bg-gradient-to-br from-primary to-secondary" />
+                          <div className="absolute inset-0 opacity-5 bg-gradient-to-br from-primary to-secondary" />
 
-                        {/* Content */}
-                        <div className="relative z-10">
-                          <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-sm mb-3">
-                            {milestone.year}
-                          </span>
-                          <h3 className="text-xl font-semibold text-foreground mb-2">
-                            {milestone.title}
-                          </h3>
-                          <p className="text-muted-foreground text-sm">
-                            {milestone.description}
-                          </p>
+                          <div className="relative z-10">
+                            <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-sm mb-3">
+                              {milestone.year}
+                            </span>
+                            <h3 className="text-xl font-semibold text-foreground mb-2">
+                              {milestone.title}
+                            </h3>
+                            <p className="text-muted-foreground text-sm">
+                              {milestone.description}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    {/* Center Dot */}
-                    <div className="absolute left-1/2 transform -translate-x-1/2 milestone-dot-container">
-                      <div className="milestone-dot w-6 h-6 rounded-full bg-gradient-to-br from-primary to-secondary border-4 border-background shadow-lg relative z-10">
-                        {/* Animated pulse ring */}
-                        <div className="absolute inset-0 rounded-full bg-primary/30 animate-ping" />
-                        {/* Inner glow */}
-                        <div className="absolute inset-0 rounded-full bg-primary/50 blur-sm" />
+                      <div className="absolute left-1/2 transform -translate-x-1/2 milestone-dot-container">
+                        <div className="milestone-dot w-6 h-6 rounded-full bg-gradient-to-br from-primary to-secondary border-4 border-background shadow-lg relative z-10">
+                          <div className="absolute inset-0 rounded-full bg-primary/30 animate-ping" />
+                          <div className="absolute inset-0 rounded-full bg-primary/50 blur-sm" />
+                        </div>
                       </div>
-                    </div>
 
-                    {/* Empty space on opposite side */}
-                    <div className="w-5/12" />
-                  </div>
-                );
-              })}
+                      <div className="w-5/12" />
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
-      {/* Team */}
-      <section id="team" className="py-20 bg-muted/50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}>
-            <h2 className="text-3xl font-bold text-foreground mb-4">
-              Leadership Team
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Meet the experienced professionals leading our company.
-            </p>
-          </motion.div>
+      {/* Team - Commented Out */}
+      {false && (
+        <section id="team" className="py-20 bg-muted/50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}>
+              <h2 className="text-3xl font-bold text-foreground mb-4">
+                Leadership Team
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Meet the experienced professionals leading our company.
+              </p>
+            </motion.div>
 
-          <motion.div
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}>
-            {team.map((member, index) => (
-              <motion.div
-                key={index}
-                variants={staggerItem}
-                className="bg-card rounded-xl p-6 shadow-card text-center hover:shadow-lg transition-shadow">
-                <div className="w-20 h-20 rounded-full bg-gradient-primary flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-primary-foreground">
-                  {member.initials}
-                </div>
-                <h3 className="text-xl font-semibold text-foreground">
-                  {member.name}
-                </h3>
-                <p className="text-primary font-medium mb-2">{member.role}</p>
-                <p className="text-sm text-muted-foreground">{member.bio}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+            <motion.div
+              className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}>
+              {team.map((member, index) => (
+                <motion.div
+                  key={index}
+                  variants={staggerItem}
+                  className="bg-card rounded-xl p-6 shadow-card text-center hover:shadow-lg transition-shadow">
+                  <div className="w-20 h-20 rounded-full bg-gradient-primary flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-primary-foreground">
+                    {member.initials}
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground">
+                    {member.name}
+                  </h3>
+                  <p className="text-primary font-medium mb-2">{member.role}</p>
+                  <p className="text-sm text-muted-foreground">{member.bio}</p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+      )}
 
       {/* Stats */}
       <section className="py-20 bg-background">

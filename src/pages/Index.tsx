@@ -11,6 +11,7 @@ import { PricingSection } from "@/components/sections/PricingSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
 import WhoWeAreSection from "@/components/common/WhoWeAreSection";
+import EHR from "@/components/sections/EHR";
 
 const Index = () => {
   return (
@@ -22,9 +23,10 @@ const Index = () => {
       <StatsSection />
       <DMESection />
       <HIPAASecuritySection />
+      <EHR/>
       <SpecialtiesSection />
       {/* <TestimonialsSection /> */}
-      <PricingSection />
+      {/* <PricingSection /> */}
       <FAQSection limit={5} />
       <CTASection
         title="Why Healthcare Providers Choose Tricore Medical Billing "

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Axaline Medical Billing Design System */
+/* Tricore Medical Billing Design System */
 /* 4-Color Medical Theme: Primary Navy, Secondary Teal, Accent Light Teal, Neutral White */
 
 @layer base {
@@ -260,5 +260,21 @@
   /* Smooth scroll snap for milestone sections */
   .milestone-wrapper {
     scroll-snap-align: start;
+  }
+
+  /* Infinite marquee animation */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+    display: flex;
+    width: fit-content;
   }
 }

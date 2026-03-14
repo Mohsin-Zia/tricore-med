@@ -193,12 +193,10 @@ const PrivacyPolicy = () => {
               <Shield className="w-10 h-10 text-secondary" />
             </motion.div>
             <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
-              Privacy Policy
+              Tricore Medical Billing Privacy Policy
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-8">
-              We are fully committed to protecting your personal, medical, and
-              financial information with the highest level of confidentiality
-              and security.
+              Tricore Medical Billing — protecting your personal, medical, and financial information
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-primary-foreground/80">
               <div className="flex items-center gap-2">
@@ -222,7 +220,7 @@ const PrivacyPolicy = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}>
             <h2 className="text-3xl font-bold text-foreground mb-6">
-              Our Commitment to Your Privacy
+              Tricore Medical Billing Privacy Policy
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
               <p>
@@ -232,20 +230,12 @@ const PrivacyPolicy = () => {
                 </strong>
                 , we are fully committed to protecting your personal, medical,
                 and financial information with the highest level of
-                confidentiality and security.
-              </p>
-              <p>
-                We operate in strict compliance with{" "}
+                confidentiality and security. We operate in strict compliance with{" "}
                 <strong className="text-foreground">HIPAA regulations</strong>{" "}
                 and applicable federal and state laws. Our goal is to ensure
                 that all sensitive data entrusted to us is handled responsibly,
                 securely stored, and used only for legitimate medical billing
                 and operational purposes.
-              </p>
-              <p>
-                By using our services and providing information to us, you agree
-                to the terms of this Privacy Policy. If you do not agree with
-                these terms, please do not use our services.
               </p>
             </div>
           </motion.div>
@@ -462,6 +452,87 @@ const PrivacyPolicy = () => {
         </div>
       </section>
 
+      {/* ── 2a. SMS Consent Form ─────────────────────────────────────────── */}
+      <section className="py-12 bg-muted/20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}>
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-2xl">SMS Consent Form</CardTitle>
+                <CardDescription className="mt-2 text-sm">
+                  By providing your phone number, you consent to receive SMS text messages
+                  from Tricore Medical Billing regarding service inquiries, appointment
+                  scheduling, onboarding updates, and account-related notifications.
+                  Message frequency may vary. Message and data rates may apply. Reply
+                  STOP to opt out at any time or HELP for assistance. Consent is not a
+                  condition of purchase.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <form className="space-y-6">
+                  <div className="space-y-2">
+                    <label className="block text-sm font-medium text-foreground">
+                      Phone Number <span className="text-destructive">*</span>
+                    </label>
+                    <input
+                      type="tel"
+                      placeholder="(123) 456-7890"
+                      className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      Standard message and data rates may apply.
+                    </p>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="block text-sm font-medium text-foreground">
+                      Full Name <span className="text-muted-foreground text-xs">(optional)</span>
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="John Doe"
+                      className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                  </div>
+
+                  <div className="flex items-start gap-2">
+                    <input
+                      id="sms-consent"
+                      type="checkbox"
+                      className="mt-1 h-4 w-4 rounded border-border text-primary focus:ring-primary"
+                    />
+                    <label
+                      htmlFor="sms-consent"
+                      className="text-sm text-foreground">
+                      I agree to receive SMS communications from Tricore Medical Billing.
+                    </label>
+                  </div>
+
+                  <button
+                    type="button"
+                    className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-sm hover:bg-primary/90 transition-colors">
+                    Submit Consent
+                  </button>
+
+                  <div className="space-y-1 pt-3 border-t border-border text-sm text-muted-foreground">
+                    <p className="font-medium text-foreground">We respect your privacy.</p>
+                    <p>
+                      By submitting this form, you agree to receive SMS communications
+                      from Tricore Medical Billing as described above. You can withdraw
+                      your consent at any time by texting STOP.
+                    </p>
+                  </div>
+                </form>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ── 3. How We Use Your Information ──────────────────────────────── */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
@@ -522,8 +593,8 @@ const PrivacyPolicy = () => {
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Tricore Medical Billing takes HIPAA compliance extremely
-              seriously. We implement comprehensive safeguards to protect
-              Protected Health Information (PHI).
+              seriously. We implement comprehensive safeguards designed to protect
+              Protected Health Information (PHI) from unauthorized access, disclosure, alteration, or destruction.
             </p>
           </motion.div>
 
@@ -590,7 +661,7 @@ const PrivacyPolicy = () => {
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Only authorized personnel within Tricore Medical Billing have
-              access to your information, strictly on a need-to-know basis.
+              access to your information. Access is granted strictly on a need-to-know basis and is limited to individuals directly involved in billing, compliance, or account management.
             </p>
           </motion.div>
 
@@ -638,7 +709,7 @@ const PrivacyPolicy = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}>
             <UserCheck className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h2 className="text-3xl font-bold text-foreground mb-4">
+            <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-4">
               6. Your Rights
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -688,11 +759,11 @@ const PrivacyPolicy = () => {
               </a>{" "}
               or by phone at{" "}
               <a
-                href="tel:+15013133708"
+                href="tel:+1 (201) 699-6877"
                 className="text-primary hover:underline">
-                (501)-313-3708
+                +1 (201) 699-6877
               </a>
-              .
+              . We will respond in accordance with applicable legal requirements.
             </motion.p>
           </div>
         </div>
@@ -847,7 +918,7 @@ const PrivacyPolicy = () => {
               <a
                 href="tel:+15013133708"
                 className="text-primary hover:underline">
-                (501)-313-3708
+                +1 (201) 699-6877
               </a>
             </motion.div>
 
